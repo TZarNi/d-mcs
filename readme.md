@@ -1,3 +1,9 @@
+# d‑mcs: Cisco AP MCS Client Extractor
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)]
+[![Ansible Role](https://img.shields.io/badge/ansible-custom%20module-orange.svg)]
+
 ### Background
 
 $\small{\textsf{There are some remote and ad-hoc sites where access-network over wireless.}}$
@@ -27,7 +33,28 @@ $\small{\textsf{3. Smart mapping of MCS Index + Spatial Stream to:}}$
 
 $\small{\textsf{4. Outputs a clean and aligned table via Ansible debug}}$
 
-### Sample Output
+### Runbook and Expected Output
+
+$\small{\textsf{mcs-check.yaml}}$
+```yaml
+- name: Get AP client info with pretty table
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Run AP client custom module
+      mcs-check:
+        host: 192.168.1.3
+        username: ****
+        password: ****
+        enable_password: ****
+      register: output
+
+    - name: Show pretty formatted table
+      debug:
+        msg: "{{ output.table_str.split('\n') }}"
+```
+$\small{\textsf{Output}}$
 
 <img width="933" height="297" alt="MS Paint _ Microsoft Paint Online" src="https://github.com/user-attachments/assets/3a842b4e-e72e-42d9-b708-1572ef07b6b3" />
 
@@ -40,7 +67,7 @@ $\small{\textsf{4. Outputs a clean and aligned table via Ansible debug}}$
 │   └── mcs-check.py
 └── mcs-check.yaml
 ```
-### Usage
+### Repo and Usage
 ```yaml
 https://gitlab.com/ZarNiT/d-mcs.git
 ```
