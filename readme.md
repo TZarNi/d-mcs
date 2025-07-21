@@ -42,7 +42,7 @@ $\small{\textsf{4. Outputs a clean and aligned table via Ansible debug}}$
 ```
 ### Usage
 
-$\small{\textsf{Clone this repo}}$
+$\small{\textsf{Clone this repo: https://gitlab.com/ZarNiT/d-mcs.git}}$
 $\small{\textsf{Create your inventory with the AP IP.}}$
 $\small{\textsf{Update credentials in the playbook}}$
 $\small{\textsf{Run the playbook:}}$
