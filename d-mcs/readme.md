@@ -29,7 +29,7 @@ $\small{\textsf{4. Outputs a clean and aligned table via Ansible debug}}$
 
 ### Sample Output
 
-<img width="959" height="319" alt="image" src="https://github.com/user-attachments/assets/de8c7e54-dbce-49a5-83a4-469aff32c4ae" />
+<img width="943" height="79" alt="image" src="https://github.com/user-attachments/assets/e8e4ff1d-9956-4987-9cae-1ede1c7f53e4" />
 
 ### Project Structure
 ```yaml
