@@ -29,9 +29,17 @@ $\small{\textsf{4. Outputs a clean and aligned table via Ansible debug}}$
 
 ### Sample Output
 
+<img width="959" height="319" alt="image" src="https://github.com/user-attachments/assets/de8c7e54-dbce-49a5-83a4-469aff32c4ae" />
 
 ### Project Structure
-
+```yaml
+.
+├── inventory
+│   └── ap_vars.yaml
+├── library
+│   └── mcs-check.py
+└── mcs-check.yaml
+```
 ### Usage
 
 $\small{\textsf{Clone this repo}}$
@@ -39,7 +47,7 @@ $\small{\textsf{Create your inventory with the AP IP.}}$
 $\small{\textsf{Update credentials in the playbook}}$
 $\small{\textsf{Run the playbook:}}$
 ```yaml
-ansible-playbook -i inventory playbook.yml
+ansible-playbook -i inventory/ap-vars.yaml mcs-check.yaml
 ```
 ### Requirements
 
@@ -51,8 +59,13 @@ ansible-playbook -i inventory playbook.yml
 ### Example Use Case
 
 $\small{\textsf{Ideal for:}}$
-Wireless performance monitoring}}$
-Auto-polling WiFi stats in educational or enterprise environments}}$
-Lightweight telemetry collection from standalone Cisco APs}}$
-Demonstrating advanced Ansible module authoring in network automation}}$
++ $\small{\textsf{Wireless performance monitoring}}$
++ $\small{\textsf{Auto-polling WiFi stats in educational or enterprise environments}}$
++ $\small{\textsf{Lightweight telemetry collection from standalone Cisco APs}}$
++ $\small{\textsf{Demonstrating advanced Ansible module authoring in network automation}}$
 
+### Reference
+```yaml
+https://mcsindex.com/
+https://www.accessagility.com/blog/how-to-improve-mcs-index
+```
